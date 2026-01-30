@@ -1,0 +1,21 @@
+data:
+  ai_path: data/processed/ai_features.xlsx
+  ai_sheet: ai
+  spectrum_path: data/processed/spectrum_labels.xlsx
+  spectrum_sheets: [ch1, ch2, ch3]
+
+train:
+  seed: 42
+  cpu_threads: 1
+  device: auto
+  epochs: 300
+  lr: 0.001
+  batch_size: 32
+  weight_decay: 0.0
+  # fixed test indices (same as original project)
+  test_indices: [62, 70, 28, 97, 83, 27]
+  save_epochs: [1, 10, 30, 300]
+
+run:
+  exp_name: baseline
+  out_dir: runs
